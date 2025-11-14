@@ -1,57 +1,46 @@
-# Artificial Intelligence in Biology
-
-This repository contains the lecture materials for the course **Artificial Intelligence in Biology (Bio-AI)**.  
-The goal is to learn and apply AI methods in various areas of biology.  
-
----
-
-## Contents
-
-- 📖 Lecture notes (`lectures/`)
-- 💻 Example codes (`examples/`)
-- 🧪 Assignments and exercises (`assignments/`)
-- 📚 Additional readings (`reading/`)
+# 📌 Week 2 – Machine Learning Assignment  
+### **Drug Response Prediction Using Random Forest (Simulated Dataset)**  
+**Prepared by:** Betül Şen  
 
 ---
 
-## About the Course
+## 📍 Overview  
+This assignment demonstrates how machine learning can be used to **predict cancer cell drug response** (IC50 values) using **simulated gene expression data**.  
+A full data science workflow is implemented:
 
-- **Course Title:** Artificial Intelligence in Biology  
-- **Level:** Undergraduate / Graduate  
-- **Objective:** To explore how AI techniques can be applied in biological research and practice  
-- **Topics Covered:**  
-  - Fundamentals of AI and machine learning  
-  - AI in bioinformatics  
-  - Image analysis (microscopy, histology, etc.)  
-  - Genomic data analysis  
-  - Protein structure prediction & drug discovery with AI  
+- Creating synthetic datasets  
+- Preprocessing and scaling  
+- Training a Random Forest model  
+- Hyperparameter tuning (GridSearchCV)  
+- Model evaluation  
+- Example predictions  
+
+This serves as a simplified version of real biomedical ML pipelines such as **GDSC, CTRP, CCLE**, etc.
 
 ---
 
-## Usage
+## 📊 Workflow Structure  
+1. **Generate Fake Gene Expression Data** (100 cell lines × 500 genes)  
+2. **Generate Fake Drug Response Values** for 5 different drugs  
+3. **Select One Drug (Cisplatin in this example)**  
+4. **Match expression and drug response data**  
+5. **Split into train/test sets**  
+6. **Scale the data**  
+7. **Train a Random Forest Regressor**  
+8. **Evaluate using MSE, R²**  
+9. **Make example predictions**  
 
-1. Clone the repository:
+---
+
+## 📂 Files  
+| File | Description |
+|------|-------------|
+| `analysis.py` | Full machine learning implementation |
+| `README.md` | Documentation and explanation |
+
+---
+
+## 🚀 How to Run  
+1. Open a terminal inside the folder:
    ```bash
-   git clone https://github.com/karakaplanm/bio-ai-lectures.git
-   ```
-
- ## Lectures
-
-- Week 1: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week01.md>Introduction to AI in Biology</a>
-- Week 2: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week02.md>Machine Learning Fundamentals</a>
-- Week 3: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week03.md>Deep Learning Basics</a>
-- Week 4: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week04.md>AI in Bioinformatics</a>
-- Week 5: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week05.md>Genomic Data Analysis</a>
-- Week 6: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week06.md>Proteomics and AI</a>
-- Week 7: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week07.md>AI in Medical Imaging (Part I)</a>
-- Week 8: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week08.md>AI in Medical Imaging (Part II)</a>
-- Week 9: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week09.md>Natural Language Processing in Biology</a>
-- Week 10: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week10.md>AI for Systems Biology</a>
-- Week 11: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week11.md>Drug Discovery with AI</a>
-- Week 12: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week12.md>Ethics & Challenges in AI for Biology</a>
-- Week 13: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week13.md>Student Project Presentations (Part I)</a>
-- Week 14: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week14.md>Student Project Presentations (Part II) & Wrap-up</a>
-
-
-
-
+   python analysis.py
